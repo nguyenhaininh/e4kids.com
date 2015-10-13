@@ -9,12 +9,12 @@
 <body>
 
 <% if user_signed_in? %>
-<h3 style="color:red"> Hello, <%= current_user.email %></h3>
-<%= link_to "Logout", destroy_user_session_path, method: :delete %>
+<h3>Hello, <%= current_user.email %>!<h3>
+<%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
 <% else %>
-<%= link_to "login", new_user_session_path %>
+<%= link_to "サインイン", new_user_session_path %>
 
-<%= link_to "register", new_user_registration_path %>
+<%= link_to "ユーザー", new_user_registration_path %>
 <% end %>
 
 <hr>
